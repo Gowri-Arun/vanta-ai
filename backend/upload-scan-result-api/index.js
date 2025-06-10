@@ -5,7 +5,7 @@ const app = express();
 const scanRoutes = require('./routes/scan');
 
 app.use(express.json());
-app.use('/api/scan', scanRoutes);
+app.use('/api/upload-scan-result', scanRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
