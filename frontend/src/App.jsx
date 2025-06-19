@@ -1,12 +1,8 @@
-import React from 'react';
-import UploadScan from './components/UploadScan.jsx';
+import React from "react";
+import DeepfakeDetector from "./components/DeepfakeDetector";
 
 function App() {
-  return (
-    <div>
-      <UploadScan />
-    </div>
-  );
+  return <DeepfakeDetector />;
 }
 
 export default App;
