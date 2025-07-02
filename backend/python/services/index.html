@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Legal Chat</title>
+</head>
+<body>
+  <button onclick="sendMessage()">Send Test Message</button>
+
+  <script>
+    function sendMessage() {
+      fetch('http://localhost:3000/api/legal-chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: "I want to file an FIR. I am angry."
+        })
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Response:', data);
+          alert(JSON.stringify(data, null, 2));
+        })
+        .catch(error => console.error('Error:', error));
+    }
+  </script>
+</body>
+</html>
